@@ -45,7 +45,7 @@ onMounted(() => {
 
 <template>
   <app-header title="User details" />
-  <article>
+  <article class="user-details">
     <q-avatar
       rounded
       size="124px"
@@ -61,14 +61,18 @@ onMounted(() => {
       v-model="user.favourite"
       class="q-ml-sm"
     />
-
     <section class="q-mt-md">
       <h2 class="text-weight-medium text-uppercase q-mb-sm">
         {{ user.first_name }}
         {{ user.last_name }}
       </h2>
-      <q-icon name="mail" />
-      {{ user.email }}
+      <q-icon
+        name="mail"
+        class="q-mr-sm"
+      />
+      <span>
+        {{ user.email }}
+      </span>
     </section>
     <div class="q-mt-md">
       <q-btn
@@ -79,3 +83,11 @@ onMounted(() => {
     </div>
   </article>
 </template>
+<style scoped lang="scss">
+.user-details {
+  border: 1px solid $primary;
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 rgba(25, 118, 210, 0.55);
+}
+</style>

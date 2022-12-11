@@ -21,6 +21,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: master
-          FOLDER: dist/spa
+          FOLDER: docs
           TARGET_FOLDER: distribution
           CLEAN: false

@@ -111,7 +111,11 @@ watchEffect(() => {
         item.first_name
           .toLowerCase()
           .includes(searchTerm.value.toLowerCase()) ||
-        item.last_name.toLowerCase().includes(searchTerm.value.toLowerCase())
+        item.last_name.toLowerCase().includes(searchTerm.value.toLowerCase()) ||
+        item.first_name
+          .toLowerCase()
+          .concat(" ", item.last_name.toLowerCase())
+          .includes(searchTerm.value.toLowerCase())
     );
   }
   isLoading.value = false;

@@ -59,7 +59,7 @@ module.exports = configure(function (/* ctx */) {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: "/quasar-app/",
+      publicPath: "/quasar-users/",
       // analyze: true,
       // env: {},
       // rawDefine: {}
